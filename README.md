@@ -1,4 +1,4 @@
-![alt text](https://github.com/borinvini/MountainShooter/blob/main/asset/Player1.png?raw=true "Mountain Shooter") SKY BATTLE ![alt text](https://github.com/borinvini/MountainShooter/blob/main/asset/Player1.png?raw=true "Mountain Shooter")
+![alt text](asset/Player1.png "Player 1") SKY BATTLE ![alt text](asset/Player2.png "Player2")
 ===============
  
 
