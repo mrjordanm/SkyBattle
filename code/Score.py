@@ -5,7 +5,7 @@ import pygame
 from pygame import Rect, Surface, KEYDOWN, K_RETURN, K_BACKSPACE, K_ESCAPE
 from pygame.font import Font
 
-from code.Const import SCORE_POS, MENU_OPTION, C_WHITE, C_YELLOW, C_CYAN, C_RED, C_BLUE, C_BLACK, C_GREEN
+from code.Const import SCORE_POS, MENU_OPTION, C_WHITE, C_CYAN, C_RED, C_BLUE2, C_BLUE1
 from code.DBProxy import DBProxy
 
 class Score:
@@ -14,7 +14,7 @@ class Score:
         self.window = window
         # trazendo a imagem de fundo
         self.surf = pygame.image.load('./asset/ScoreBg.png').convert_alpha()
-        # criando o retangulo da imagem
+        # criando o retângulo da imagem
         self.rect = self.surf.get_rect(left=0, top=0)
         pass
 
@@ -65,15 +65,15 @@ class Score:
         # deixando no loop
         pygame.mixer_music.play(-1)
         self.window.blit(source=self.surf, dest=self.rect)
-        self.score_text(48, 'TOP 10 SCORE', C_GREEN, SCORE_POS['TitleScore'])
-        self.score_text(20, 'Name      Score                Date', C_BLACK, SCORE_POS['Label'])
+        self.score_text(48, 'TOP 10 SCORE', C_BLUE1, SCORE_POS['TitleScore'])
+        self.score_text(24, 'Name      Score           Date', C_BLUE2, SCORE_POS['Label'])
         db_proxy = DBProxy('DBScore')
         list_score = db_proxy.retrieve_top10()
         db_proxy.close()
 
         for player_score in list_score:
             id_, name, score, date = player_score
-            self.score_text(20, f'  {name}       {score:05d}       {date}', C_WHITE,
+            self.score_text(19, f'{name}        {score:06d}     {date}', C_WHITE,
                             SCORE_POS[list_score.index(player_score)])
 
         while True:

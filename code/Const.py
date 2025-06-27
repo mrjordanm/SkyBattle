@@ -3,13 +3,16 @@ import pygame
 from pygame.examples.grid import WINDOW_WIDTH
 
 # C
-C_BLUE = (17, 40, 237)
+C_BLUE1 = (17, 40, 237)
+C_BLUE2 = (11, 27, 158)
+C_BLUE3 = (7, 18,105)
 C_WHITE = (255, 255, 255)
 C_YELLOW = (255, 254, 0)
 C_GREEN = (0, 128, 0)
 C_CYAN = (0, 128, 128)
 C_BLACK = (0, 0, 0)
 C_RED = (237, 28, 36)
+
 
 # E
 ENTITY_DAMAGE = {
@@ -104,10 +107,10 @@ ENTITY_SPEED = {
     'Level2Bg2' : 0,
     'Level2Bg3' : 1,
     'Level2Bg4' : 2,
-    'Level3Bg0' : 0,
-    'Level3Bg1' : 3,
+    'Level3Bg0' : 3,
+    'Level3Bg1' : 0,
     'Level3Bg2' : 1,
-    'Level3Bg3' : 3,
+    'Level3Bg3' : 1,
     'Player1' : 4,
     'Player1Shoot' : 4,
     'Player2' : 4,
@@ -123,11 +126,11 @@ EVENT_ENEMY = pygame.USEREVENT + 1
 EVENT_TIMEOUT = pygame.USEREVENT + 2
 
 # M
-MENU_OPTION = ('NEW GAME 1P',
-               'NEW GAME 2P - COOPERATIVE',
-               'NEW GAME 2P - COMPETITIVE',
-               'SCORE',
-               'EXIT')
+MENU_OPTION = ('New game',
+               'Cooperative - Multiplayer',
+               'Competitive - Multiplayer',
+               'Score',
+               'Exit')
 
 # P
 PLAYER_KEY_UP = {'Player1': pygame.K_UP, 'Player2': pygame.K_w}
@@ -151,7 +154,7 @@ WIN_HEIGHT = 324
 SCORE_POS = {'Title': (WIN_WIDTH/2, WIN_HEIGHT/2 - 10),
              'TitleScore': (WIN_WIDTH/2, 50),
              'EnterName': (WIN_WIDTH/2, WIN_HEIGHT/2 + 30),
-             'Label': (251, 90),
+             'Label': (250, 90),
              'Name': (WIN_WIDTH/2, WIN_HEIGHT/2 + 50),
              0: (WIN_WIDTH/2, 110),
              1: (WIN_WIDTH/2, 130),
