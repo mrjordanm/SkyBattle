@@ -5,7 +5,7 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import C_WHITE, WIN_WIDTH, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME, C_GREEN, C_CYAN, C_BLUE, \
+from code.Const import C_WHITE, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME, C_GREEN, C_BLUE, \
     EVENT_TIMEOUT, TIMEOUT_STEP, TIMEOUT_LEVEL, C_BLACK
 from code.Enemy import Enemy
 from code.Entity import Entity
@@ -75,9 +75,9 @@ class Level:
                     return False
 
             #printed text
-            self.level_text(14, f'{self.name} - Timeout: {self.timeout / 1000:.1f}s', C_BLACK, (10, 5))
-            self.level_text(14, f'FPS: {clock.get_fps():.0f}', C_WHITE, (10, WIN_HEIGHT - 35))
-            self.level_text(14, f'Entidade: {len(self.entity_list)}', C_WHITE, (10, WIN_HEIGHT - 20))
+            self.level_text(14, f'{self.name} - Timeout: {self.timeout / 1000:.1f}s', C_WHITE, (10, 5))
+            self.level_text(10, f'FPS: {clock.get_fps():.0f}', C_WHITE, (10, WIN_HEIGHT - 20))
+            #self.level_text(14, f'Entidade: {len(self.entity_list)}', C_WHITE, (10, WIN_HEIGHT - 20))
             pygame.display.flip()
             # Collisions
             EntityMediator.verify_collision(entity_list=self.entity_list)

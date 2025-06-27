@@ -8,7 +8,6 @@ from pygame.font import Font
 from code.Const import SCORE_POS, MENU_OPTION, C_WHITE, C_YELLOW, C_CYAN, C_RED, C_BLUE, C_BLACK, C_GREEN
 from code.DBProxy import DBProxy
 
-
 class Score:
 
     def __init__(self, window):

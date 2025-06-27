@@ -30,11 +30,11 @@ ENTITY_DAMAGE = {
     'Player1Shoot' : 25,
     'Player2' : 1,
     'Player2Shoot' : 25,
-    'Enemy1' : 1,
+    'Enemy1' : 1/2,
     'Enemy1Shoot' : 20,
-    'Enemy2' : 1,
+    'Enemy2' : 1/2,
     'Enemy2Shoot' : 15,
-    'Enemy3' : 1,
+    'Enemy3' : 1/2,
     'Enemy3Shoot' : 15}
 
 ENTITY_HEALTH = {
@@ -51,9 +51,9 @@ ENTITY_HEALTH = {
     'Level3Bg1' : 999,
     'Level3Bg2' : 999,
     'Level3Bg3' : 999,
-    'Player1' : 150,
+    'Player1' : 200,
     'Player1Shoot' : 1,
-    'Player2' : 150,
+    'Player2' : 200,
     'Player2Shoot' : 1,
     'Enemy1' : 50,
     'Enemy1Shoot' : 1,
@@ -89,7 +89,7 @@ ENTITY_SCORE = {
 
 ENTITY_SHOOT_DELAY = {
     'Player1': 25,
-    'Player2': 325,
+    'Player2': 25,
     'Enemy1': 75,
     'Enemy2': 70,
     'Enemy3': 60}

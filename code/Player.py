@@ -1,5 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 import pygame.key
 
 from code.Const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDTH, PLAYER_KEY_UP, PLAYER_KEY_DOWN, PLAYER_KEY_LEFT, \
@@ -30,6 +28,10 @@ class Player(Entity):
             self.shoot_delay = ENTITY_SHOOT_DELAY[self.name]
             pressed_key = pygame.key.get_pressed()
             if pressed_key[PLAYER_KEY_SHOOT[self.name]]:
+                # som do laser
+                shoot = pygame.mixer.Sound('./asset/laserPlayer.ogg')
+                shoot.play()
+
                 return PlayerShoot(name=f'{self.name}Shoot', position=(self.rect.centerx, self.rect.centery))
             else:
                 return None
