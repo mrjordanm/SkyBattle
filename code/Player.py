@@ -31,7 +31,6 @@ class Player(Entity):
                 # som do laser
                 shoot = pygame.mixer.Sound('./asset/laserPlayer.ogg')
                 shoot.play()
-
                 return PlayerShoot(name=f'{self.name}Shoot', position=(self.rect.centerx, self.rect.centery))
             else:
                 return None
