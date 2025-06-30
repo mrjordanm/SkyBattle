@@ -1,3 +1,5 @@
+import pygame
+
 from code.Const import WIN_WIDTH
 from code.Enemy import Enemy
 from code.EnemyShoot import EnemyShoot
@@ -30,7 +32,7 @@ class EntityMediator:
             valid_interaction = True
         elif isinstance(ent1, EnemyShoot) and isinstance(ent2, Player):
             valid_interaction = True
-            # dano de colisão de naves
+            # colisão de naves
         elif isinstance(ent1, Enemy) and isinstance(ent2, Player):
             valid_interaction = True
         elif isinstance(ent1, Player) and isinstance(ent2, Enemy):
@@ -45,6 +47,12 @@ class EntityMediator:
                 ent2.health -= ent1.damage
                 ent1.last_dmg = ent2.name
                 ent2.last_dmg = ent1.name
+
+                # #TESTE SOM DE IMPACTO:
+                # if ((ent1 == EnemyShoot) and (ent2 == Player)) or ((ent2 == EnemyShoot) and (ent1 == Player)):
+                #         # # som de colisão
+                #         dmg = pygame.mixer.Sound('./asset/damage.ogg')
+                #         dmg.play()
 
     @staticmethod
     def __give_score(enemy: Enemy, entity_list: list[Entity]):
